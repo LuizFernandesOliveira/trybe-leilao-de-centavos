@@ -16,7 +16,7 @@ function Cart({ product, socket }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    socket.emit('bidClient', product);
+    socket.emit('bidClient', { id, price: currentPrice });
   };
 
   return (
