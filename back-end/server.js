@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
     await Product.update({ price: price + 5 }, { where: { id } });
     const productUpdated = await Product.findOne({ where: { id } });
 
-    socket.emit('updatePrice', productUpdated);
+    io.emit('updatePrice', productUpdated);
   });
 });
 

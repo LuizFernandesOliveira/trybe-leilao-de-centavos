@@ -15,18 +15,20 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <header>
-        <span>R$</span>
-        <h1>Leilão de centavos</h1>
+        <span className="logo">R$</span>
+        <h1 className="title">Leilão de centavos</h1>
       </header>
-      {products.map((product) => (
-        <Card
-          key={ product.id }
-          product={ product }
-          socket={ socket }
-        />
-      ))}
+      <div className="content-products">
+        {products.map((product) => (
+          <Card
+            key={ product.id }
+            product={ product }
+            socket={ socket }
+          />
+        ))}
+      </div>
     </div>
   );
 }

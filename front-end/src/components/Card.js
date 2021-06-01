@@ -21,16 +21,16 @@ function Cart({ product, socket }) {
 
   return (
     <div>
-      <div>
+      <div className="content-name">
         <p>{ name }</p>
       </div>
-      <div>
+      <div className="content-img">
         <img src={ img } alt="test" />
       </div>
-      <div>
-        <span>{ currentPrice }</span>
+      <div className="content-price">
+        <span>{ `R$ ${currentPrice},00` }</span>
       </div>
-      <div>
+      <div className="content-btn">
         <button
           onClick={ handleSubmit }
           disabled={ currentPrice >= PRICE_MAX }
